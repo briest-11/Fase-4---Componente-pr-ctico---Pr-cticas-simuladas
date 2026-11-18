@@ -1,0 +1,64 @@
+2026-11-18 21:24:30,875 | INFO     | Servicio agregado: Spa (capacidad 4, disponible)
+2026-11-18 21:24:30,875 | INFO     | Servicio agregado: Restaurante (capacidad 10, disponible)
+2026-11-18 21:24:30,875 | INFO     | Servicio agregado: Piscina (capacidad 20, NO disponible)
+2026-11-18 21:24:30,875 | INFO     | --- Simulación 1: Reserva válida en el Spa ---
+2026-11-18 21:24:30,878 | INFO     | Reserva creada -> Reserva #1: Ana Pérez - Spa - 2 persona(s) - 2026-11-19
+2026-11-18 21:24:30,878 | INFO     | Simulación 1 -> completada con éxito
+2026-11-18 21:24:30,879 | INFO     | --- Fin de la simulación 1 ---
+2026-11-18 21:24:30,879 | INFO     | --- Simulación 2: Reserva válida en el Restaurante ---
+2026-11-18 21:24:30,879 | INFO     | Reserva creada -> Reserva #2: Luis Gómez - Restaurante - 6 persona(s) - 2026-11-20
+2026-11-18 21:24:30,879 | INFO     | Simulación 2 -> completada con éxito
+2026-11-18 21:24:30,879 | INFO     | --- Fin de la simulación 2 ---
+2026-11-18 21:24:30,879 | INFO     | --- Simulación 3: Cancelar una reserva existente ---
+2026-11-18 21:24:30,879 | INFO     | Reserva cancelada -> Reserva #2: Luis Gómez - Restaurante - 6 persona(s) - 2026-11-20
+2026-11-18 21:24:30,879 | INFO     | Simulación 3 -> completada con éxito
+2026-11-18 21:24:30,879 | INFO     | --- Fin de la simulación 3 ---
+2026-11-18 21:24:30,879 | INFO     | --- Simulación 4: Guardar reservas en un archivo ---
+2026-11-18 21:24:30,879 | INFO     | Reservas guardadas correctamente en 'reservas.json'.
+2026-11-18 21:24:30,880 | INFO     | Intento de guardado finalizado.
+2026-11-18 21:24:30,880 | INFO     | Simulación 4 -> completada con éxito
+2026-11-18 21:24:30,880 | INFO     | --- Fin de la simulación 4 ---
+2026-11-18 21:24:30,880 | INFO     | --- Simulación 5: Cliente con nombre vacío ---
+2026-11-18 21:24:30,880 | ERROR    | Simulación 5 -> DatosInvalidosError: El nombre del cliente no puede estar vacío.
+2026-11-18 21:24:30,880 | INFO     | --- Fin de la simulación 5 ---
+2026-11-18 21:24:30,880 | INFO     | --- Simulación 6: Cantidad de personas escrita con letras ---
+2026-11-18 21:24:30,880 | ERROR    | Simulación 6 -> DatosInvalidosError: La cantidad de personas 'dos' no es un número.
+2026-11-18 21:24:30,880 | ERROR    |    Causa original: ValueError: invalid literal for int() with base 10: 'dos'
+2026-11-18 21:24:30,880 | INFO     | --- Fin de la simulación 6 ---
+2026-11-18 21:24:30,880 | INFO     | --- Simulación 7: Cantidad de personas negativa ---
+2026-11-18 21:24:30,880 | ERROR    | Simulación 7 -> DatosInvalidosError: La cantidad de personas debe ser mayor que cero.
+2026-11-18 21:24:30,880 | INFO     | --- Fin de la simulación 7 ---
+2026-11-18 21:24:30,880 | INFO     | --- Simulación 8: Fecha mal escrita ---
+2026-11-18 21:24:30,881 | ERROR    | Simulación 8 -> DatosInvalidosError: La fecha '32/13/2026' no es válida. Use el formato AAAA-MM-DD.
+2026-11-18 21:24:30,881 | ERROR    |    Causa original: ValueError: time data '32/13/2026' does not match format '%Y-%m-%d'
+2026-11-18 21:24:30,881 | INFO     | --- Fin de la simulación 8 ---
+2026-11-18 21:24:30,881 | INFO     | --- Simulación 9: Fecha que ya pasó ---
+2026-11-18 21:24:30,881 | ERROR    | Simulación 9 -> ReservaInvalidaError: La fecha 2026-11-17 ya pasó; no se puede reservar.
+2026-11-18 21:24:30,881 | INFO     | --- Fin de la simulación 9 ---
+2026-11-18 21:24:30,881 | INFO     | --- Simulación 10: Servicio que no existe ---
+2026-11-18 21:24:30,881 | ERROR    | Simulación 10 -> ServicioNoExisteError: El servicio 'Gimnasio' no existe en el catálogo.
+2026-11-18 21:24:30,881 | ERROR    |    Causa original: KeyError: 'Gimnasio'
+2026-11-18 21:24:30,881 | INFO     | --- Fin de la simulación 10 ---
+2026-11-18 21:24:30,881 | INFO     | --- Simulación 11: Servicio no disponible (Piscina) ---
+2026-11-18 21:24:30,881 | ERROR    | Simulación 11 -> ServicioNoDisponibleError: El servicio 'Piscina' no está disponible.
+2026-11-18 21:24:30,881 | INFO     | --- Fin de la simulación 11 ---
+2026-11-18 21:24:30,881 | INFO     | --- Simulación 12: Más personas que la capacidad ---
+2026-11-18 21:24:30,881 | ERROR    | Simulación 12 -> ReservaInvalidaError: 9 personas superan la capacidad de 4 del servicio.
+2026-11-18 21:24:30,881 | INFO     | --- Fin de la simulación 12 ---
+2026-11-18 21:24:30,881 | INFO     | --- Simulación 13: Reserva duplicada ---
+2026-11-18 21:24:30,881 | ERROR    | Simulación 13 -> ReservaInvalidaError: Ya existe una reserva igual para ese cliente, servicio y fecha.
+2026-11-18 21:24:30,882 | INFO     | --- Fin de la simulación 13 ---
+2026-11-18 21:24:30,882 | INFO     | --- Simulación 14: Cancelar una reserva que no existe ---
+2026-11-18 21:24:30,882 | ERROR    | Simulación 14 -> ReservaNoEncontradaError: No existe la reserva #99.
+2026-11-18 21:24:30,882 | ERROR    |    Causa original: KeyError: 99
+2026-11-18 21:24:30,882 | INFO     | --- Fin de la simulación 14 ---
+2026-11-18 21:24:30,882 | INFO     | --- Simulación 15: Guardar en una ruta inválida ---
+2026-11-18 21:24:30,882 | INFO     | Intento de guardado finalizado.
+2026-11-18 21:24:30,882 | ERROR    | Simulación 15 -> ErrorGuardadoError: No se pudo guardar en '/carpeta/que/no/existe/reservas.json'.
+2026-11-18 21:24:30,882 | ERROR    |    Causa original: FileNotFoundError: [Errno 2] No such file or directory: '/carpeta/que/no/existe/reservas.json'
+2026-11-18 21:24:30,882 | INFO     | --- Fin de la simulación 15 ---
+2026-11-18 21:24:30,882 | INFO     | --- Simulación 16: Dato nulo (None) como personas ---
+2026-11-18 21:24:30,882 | ERROR    | Simulación 16 -> DatosInvalidosError: La cantidad de personas 'None' no es un número.
+2026-11-18 21:24:30,882 | ERROR    |    Causa original: TypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'
+2026-11-18 21:24:30,882 | INFO     | --- Fin de la simulación 16 ---
+2026-11-18 21:24:30,882 | INFO     | RESUMEN: {'exitosas': 4, 'con_error_controlado': 12, 'error_inesperado': 0}
